@@ -1,5 +1,5 @@
 {
-  "name": "hiz-grup/core",
+  "name": "hiz-grup/escolalms-core",
   "description": "Escola Headless LMS",
   "type": "package",
   "require": {
