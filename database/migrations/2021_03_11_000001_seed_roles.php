@@ -16,7 +16,7 @@ class SeedRoles extends EscolaMigration
      */
     public function up()
     {
-        app(RoleTableSeeder::class)->run();
+        // app(RoleTableSeeder::class)->run();
     }
 
     /**
@@ -26,6 +26,6 @@ class SeedRoles extends EscolaMigration
      */
     public function down()
     {
-        Role::truncate();
+        // Role::truncate();
     }
 }
