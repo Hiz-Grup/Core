@@ -13,9 +13,9 @@ class AddColumnTimezoneInUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('current_timezone', 50)->nullable()->default('UTC');
-        });
+        // Schema::table('users', function (Blueprint $table) {
+        //     $table->string('current_timezone', 50)->nullable()->default('UTC');
+        // });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddColumnTimezoneInUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('current_timezone', 50);
-        });
+        // Schema::table('users', function (Blueprint $table) {
+        //    $table->dropColumn('current_timezone', 50);
+        // });
     }
 }
