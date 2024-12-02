@@ -12,10 +12,7 @@ class EscolaMigration extends Migration
     protected function avoidDuplicateTable(string $table): void
     {
         if (Schema::hasTable($table)) {
-            if (DB::table($table)->count() > 0) {
-                throw new RuntimeException("Your database already has $table table with data.
-                Disable LMS migrations by setting escolalms.core.ignore_migrations to true, and publish them.");
-            } else {
+            if (DB::table($table)->count() == 0) {
                 $this->down();
             }
         }
