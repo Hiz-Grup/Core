@@ -14,6 +14,7 @@ class EscolaMigration extends Migration
         if (Schema::hasTable($table)) {
             if (DB::table($table)->count() == 0) {
                 $this->down();
+                Schema::create($table, $schema);
             }
         }
     }
@@ -21,7 +22,6 @@ class EscolaMigration extends Migration
     public function create(string $table, \Closure $schema)
     {
         $this->avoidDuplicateTable($table);
-        Schema::create($table, $schema);
     }
 
     public function down()
